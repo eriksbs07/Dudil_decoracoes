@@ -40,10 +40,18 @@ footer {
 
 /*personalização*/
 /*menu*/
-
+.botao_menu{
+    font-family: 'Fredericka the Great', cursive!important;
+    font-size: 22px;
+    color:#EEB422 !important;
+}
 h1{
-    font-family: 'Fredericka the Great', cursive;
+    
 }
 
 /*body*/
+
+
+
+
 
