@@ -49,8 +49,8 @@
 
 <body>
 
-     <nav class="navbar navbar-default  affix-top boxtrans" role="navigation">
-          <div class="container-fluid">
+     <nav class="navbar navbar-inverse navbar-fixed-top boxtrans" id="nav_bar" role="navigation">
+          <div class="container">
                <!-- Brand and toggle get grouped for better mobile display -->
                <div class="navbar-header ">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -59,7 +59,7 @@
                          <span class="icon-bar"></span>
                          <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand botao_menu" href="#inicio">Dudil Decorações e Buffet</a>
+                    <a class="navbar-brand botao_menu" href="#inicio"></a>
                </div>
                <!-- Collect the nav links, forms, and other content for toggling -->
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -148,12 +148,12 @@
           </a>
 
      </header>
+     
 
      
     <a  name="quemsomos"></a>
-     <div class="content-section-a">
-          <hr class="section-heading-spacer">
-
+     <div class="content-section-a fundo-papel">
+          
           <div class="container">
                <div class="row">
                     <div class="col-lg-8">
@@ -235,6 +235,15 @@
 
           </div>
           <!-- /.container -->
+          <!--Imagem rolagem-->
+     <div id="tf-testimonials" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                
+                
+            </div>
+        </div>
+    </div>
 
     </div>
     <a  name="fotos"></a>
@@ -380,14 +389,7 @@
 
 
      <!-- imagem rotativa relative site-->
-    <div id="tf-testimonials" class="text-center">
-        <div class="overlay">
-            <div class="container">
-                
-                
-            </div>
-        </div>
-    </div>
+    
 
     <a  name="contatos"></a>
     <hr class="section-heading-spacer">
@@ -466,6 +468,26 @@
  
 
 <script>
+
+$(document).ready(function() {
+  //change the integers below to match the height of your upper dive, which I called
+  //banner.  Just add a 1 to the last number.  console.log($(window).scrollTop())
+  //to figure out what the scroll position is when exactly you want to fix the nav
+  //bar or div or whatever.  I stuck in the console.log for you.  Just remove when
+  //you know the position.
+  $(window).scroll(function () { 
+
+    console.log($(window).scrollTop());
+
+    if ($(window).change()) {
+      $('#nav_bar').addClass('boxtrans');
+    }
+    if ($(window).scrollTop() > 901) {
+      $('#nav_bar').removeClass('boxtrans');
+    }
+    
+  });
+});
 
 jQuery(function($){
        $("#telefone2").mask("(99) 9-9999-9999");
